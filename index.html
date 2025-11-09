@@ -9,7 +9,7 @@
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #a4b3c5, #436880); /* tom médio-profissional */
+      background: linear-gradient(135deg, #a4b3c5, #436880);
       color: #f3f3f3;
       font-family: "Bookman Old Style", Georgia, serif;
       display: flex;
@@ -19,24 +19,28 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      text-align: center;
+      padding: 0 1rem;
     }
 
     /* ====== MENU ====== */
     nav {
       position: absolute;
-      top: 30px;
+      top: 20px;
       display: flex;
-      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 0 1rem;
     }
 
     nav a {
       text-decoration: none;
       color: #e0e0e0;
-      padding: 8px 18px;
+      padding: 8px 16px;
       border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: 25px;
-      font-size: 1.05rem;
-      font-weight: 500;
+      font-size: 1rem;
       transition: all 0.3s ease;
     }
 
@@ -47,20 +51,18 @@
 
     /* ====== CENTER TEXT ====== */
     h1 {
-      font-size: 4.2rem;
+      font-size: 3.2rem;
       font-weight: bold;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.5px;
       margin: 0;
-      text-align: center;
       text-shadow: 2px 2px 5px rgba(139, 134, 134, 0.6);
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 500;
       margin-top: 12px;
       color: #f1f2f3;
-      text-align: center;
       text-shadow: 1px 1px 3px rgba(102, 93, 93, 0.4);
     }
 
@@ -68,34 +70,73 @@
     footer {
       position: absolute;
       bottom: 20px;
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #f1f4f7;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* ====== RESPONSIVE DESIGN ====== */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      nav {
+        top: 10px;
+        gap: 10px;
+      }
+      nav a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+      footer {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 0.95rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
+
 <body style="
   background-image: url('j1c_fundo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed">
+  background-attachment: fixed;
+">
   <nav>
     <a href="https://www.linkedin.com/in/paulo-ricardo-5445361bb/">About</a>
     <a href="https://www.youtube.com/@RicardoNSPS">Projects</a>
     <a href="https://www.authorea.com/users/742535-paulo-ricardo">Publications</a>
-    <a href="mailto:pauloricardo.dr@gmail.com">pauloricardo.dr@gmail.com</a>
-    
+    <a href="mailto:pauloricardo.dr@gmail.com">Contact</a>
   </nav>
 
   <main>
     <h1>PAULO RICARDO</h1>
     <h2>Telecommunications Engineer • Researcher • Innovator</h2>
-   </main>
+  </main>
 
   <footer>
     © 2025 Paulo Ricardo. All rights reserved.
   </footer>
 </body>
 </html>
+
+
 
 
