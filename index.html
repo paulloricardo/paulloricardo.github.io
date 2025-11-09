@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paulo Ricardo | Engineer & Innovator</title>
+
   <style>
     /* ====== GLOBAL STYLE ====== */
     body {
       margin: 0;
-      min-height: 100vh;
+      height: 100vh;
       background: linear-gradient(135deg, #a4b3c5, #436880);
       color: #f3f3f3;
       font-family: "Bookman Old Style", Georgia, serif;
@@ -16,21 +17,24 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-size: cover;
-      background-position: center;
+      background-image: url('j1c_fundo.png');
       background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      text-align: center;
+      padding: 0 1rem;
     }
 
-    /* ====== NAVIGATION ====== */
+    /* ====== MENU ====== */
     nav {
       position: absolute;
       top: 20px;
       display: flex;
-      gap: 18px;
       flex-wrap: wrap;
       justify-content: center;
-      width: 100%;
-      padding: 0 10px;
+      gap: 16px;
+      padding: 0 1rem;
     }
 
     nav a {
@@ -40,45 +44,47 @@
       border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: 25px;
       font-size: 1rem;
-      font-weight: 500;
       transition: all 0.3s ease;
     }
 
     nav a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(71, 67, 67, 0.18);
       color: #fff;
     }
 
     /* ====== CENTER TEXT ====== */
-    main {
-      text-align: center;
-      padding: 0 15px;
-    }
-
     h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
       margin: 0;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+      text-shadow: 2px 2px 5px rgba(139, 134, 134, 0.6);
     }
 
     h2 {
-      font-size: 1.2rem;
-      margin-top: 10px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-top: 12px;
       color: #f1f2f3;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      text-shadow: 1px 1px 3px rgba(102, 93, 93, 0.4);
     }
 
     /* ====== FOOTER ====== */
     footer {
       position: absolute;
-      bottom: 15px;
+      bottom: 20px;
       font-size: 0.9rem;
+      color: #f1f4f7;
       text-align: center;
       width: 100%;
     }
 
     /* ====== RESPONSIVE DESIGN ====== */
     @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+        background-size: contain;
+      }
       h1 {
         font-size: 2.2rem;
       }
@@ -87,31 +93,41 @@
       }
       nav {
         top: 10px;
-        flex-direction: column;
-        align-items: center;
         gap: 10px;
       }
       nav a {
-        font-size: 0.95rem;
-        padding: 6px 14px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
       }
       footer {
         font-size: 0.8rem;
       }
     }
+
+    @media (max-width: 480px) {
+      body {
+        background-size: cover;
+        background-position: top;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 0.95rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 
-<body style="
-  background-image: url('j1c_fundo.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-">
+<body>
   <nav>
-    <a href="https://www.linkedin.com/in/paulo-ricardo-5445361bb/" target="_blank">About</a>
-    <a href="https://www.youtube.com/@RicardoNSPS" target="_blank">Projects</a>
-    <a href="https://www.authorea.com/users/742535-paulo-ricardo" target="_blank">Publications</a>
+    <a href="https://www.linkedin.com/in/paulo-ricardo-5445361bb/">About</a>
+    <a href="https://www.youtube.com/@RicardoNSPS">Projects</a>
+    <a href="https://www.authorea.com/users/742535-paulo-ricardo">Publications</a>
     <a href="mailto:pauloricardo.dr@gmail.com">Contact</a>
   </nav>
 
@@ -125,6 +141,8 @@
   </footer>
 </body>
 </html>
+
+
 
 
 
