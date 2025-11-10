@@ -1,0 +1,195 @@
+body {
+  background: linear-gradient(135deg, #1a1c20, #2c3e50);
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* ===== SLIDESHOW CENTRALIZADO ===== */
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* Ajuste automático da altura */
+.slideshow img {
+  width: 100%;
+  height: auto;
+  max-height: 420px; /* limite no desktop */
+  object-fit: contain; /* mostra imagem completa sem cortar */
+  display: none;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slideshow img.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ===== TITLES ===== */
+h1 {
+  font-size: 2.8rem;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-weight: 400;
+  color: #dcdcdc;
+  margin-bottom: 2em;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  padding: 0.8em 1.8em;
+  margin: 0.3em;
+  color: var(--color);
+  border-color: var(--color);
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+button:hover,
+button:focus {
+  color: #fff;
+  border-color: var(--hover);
+}
+
+/* === BUTTON EFFECTS === */
+.fill:hover { box-shadow: inset 0 0 0 2em var(--hover); }
+.raise:hover { box-shadow: 0 0.5em 0.5em -0.4em var(--hover); transform: translateY(-0.25em); }
+.slide:hover { box-shadow: inset 6.5em 0 0 0 var(--hover); }
+.offset { box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color); }
+.offset:hover { box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover); }
+
+/* === COLORS === */
+.fill { --color: #a972cb; --hover: #cb72aa; }
+.slide { --color: #8fc866; --hover: #668fc8; }
+.raise { --color: #ffa260; --hover: #60a2ff; }
+.offset { --color: #19bc8b; --hover: #286fb3; }
+.pulse { --color: #ef6eae; --hover: #ef8f6e; }
+
+/* === DROPDOWN === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1f1f1f;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* === FOOTER === */
+footer {
+  margin-top: 3em;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #f1f1f1;
+  margin: 0 8px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00bcd4;
+}
+
+/* === WhatsApp Button === */
+.notify-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  background: #25d366;
+  color: #fff !important;
+  border: none;
+  padding: 0.9em 1.5em;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.notify-btn:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; margin-top: 0.8em; }
+  h2 { font-size: 1rem; margin-bottom: 1.5em; }
+
+  .slideshow {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .slideshow img {
+    max-height: 250px; /* reduz altura no celular */
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    padding: 0.7em 1.2em;
+    font-size: 0.9rem;
+  }
+}

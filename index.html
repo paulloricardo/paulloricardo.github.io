@@ -4,148 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paulo Ricardo | Engineer & Innovator</title>
-
-  <style>
-    /* ====== GLOBAL STYLE ====== */
-    body {
-      margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #a4b3c5, #436880);
-      color: #f3f3f3;
-      font-family: "Bookman Old Style", Georgia, serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-image: url('j1c_fundo.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
-      text-align: center;
-      padding: 0 1rem;
-    }
-
-    /* ====== MENU ====== */
-    nav {
-      position: absolute;
-      top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      padding: 0 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #e0e0e0;
-      padding: 8px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 25px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: rgba(71, 67, 67, 0.18);
-      color: #fff;
-    }
-
-    /* ====== CENTER TEXT ====== */
-    h1 {
-      font-size: 3.2rem;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      margin: 0;
-      text-shadow: 2px 2px 5px rgba(139, 134, 134, 0.6);
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      font-weight: 500;
-      margin-top: 12px;
-      color: #f1f2f3;
-      text-shadow: 1px 1px 3px rgba(102, 93, 93, 0.4);
-    }
-
-    /* ====== FOOTER ====== */
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: #f1f4f7;
-      text-align: center;
-      width: 100%;
-    }
-
-    /* ====== RESPONSIVE DESIGN ====== */
-    @media (max-width: 768px) {
-      body {
-        background-attachment: scroll;
-        background-size: contain;
-      }
-      h1 {
-        font-size: 2.2rem;
-      }
-      h2 {
-        font-size: 1rem;
-      }
-      nav {
-        top: 10px;
-        gap: 10px;
-      }
-      nav a {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-      }
-      footer {
-        font-size: 0.8rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        background-size: cover;
-        background-position: top;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      h2 {
-        font-size: 0.95rem;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
-  <nav>
-    <a href="https://www.linkedin.com/in/paulo-ricardo-5445361bb/">About</a>
-    <a href="https://www.youtube.com/@RicardoNSPS">Projects</a>
-    <a href="https://www.authorea.com/users/742535-paulo-ricardo">Publications</a>
-    <a href="mailto:pauloricardo.dr@gmail.com">Contact</a>
-  </nav>
+  <!-- Banner Slideshow -->
+  <header class="slideshow">
+    <img src="j1c_fundo.png" alt="Engineering Project 1" class="active">
+    <img src="j1c_logo.jpg" alt="Engineering Project 2">
+    <img src="vlc_ard.jpg" alt="Engineering Project 3">
+    <img src="circ_vlc.png" alt="Engineering Project 4">
+    <img src="smart_switch.jpg" alt="Engineering Project 5">
+  </header>
 
   <main>
     <h1>PAULO RICARDO</h1>
     <h2>Telecommunications Engineer • Researcher • Innovator</h2>
+
+    <div class="buttons">
+      <button class="fill" onclick="location.href='https://www.linkedin.com/in/paulo-ricardo-5445361bb/'">About</button>
+
+      <div class="dropdown">
+        <button class="slide">Projects ▾</button>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/@RicardoNSPS" target="_blank">YouTube Channel</a>
+          <a href="https://www.youtube.com/watch?v=3vXVVURCbBg&t=2s">Smart Switch</a>
+          <a href="https://www.youtube.com/watch?v=gw7UfqiIT6w&t=2s">Wireless Power Transfer - WPT</a>
+          <a href="https://www.youtube.com/watch?v=LvIQ0z2lXmM&t=4s">Visible Light Communication VLC</a>
+          <a href="https://www.youtube.com/watch?v=P_qYMpVhIKw">Internet of Things - IoT</a>
+          <a href="https://x.com/paulordr17">Lighting Fixtures</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="raise">Publications ▾</button>
+        <div class="dropdown-content">
+          <a href="https://www.authorea.com/users/742535-paulo-ricardo" target="_blank">IEEE American Institute</a>
+          <a href="https://engrxiv.org/preprint/view/3179" target="_blank">American Engineering Journal</a>
+        </div>
+      </div>
+
+      <button class="offset" onclick="location.href='mailto:pauloricardo.dr@gmail.com'">Contact</button>
+
+      <a href="https://wa.me/5585984800307?text=Olá%20Paulo,%20vim%20do%20seu%20site!" target="_blank">
+        <button class="notify-btn">Notify Me</button>
+      </a>
+    </div>
   </main>
 
   <footer>
-    © 2025 Paulo Ricardo. All rights reserved.
+    <p>© 2025 Paulo Ricardo. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/paulo-ricardo-5445361bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@RicardoNSPS" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/paulordr17" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
