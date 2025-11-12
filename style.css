@@ -132,64 +132,172 @@ footer {
   text-align: center;
 }
 
-.social-icons {
-  margin-top: 10px;
+/* === SOCIAL BUTTONS 3D / ANIMATED === */
+.social-btns {
+  margin-top: 1em;
+  text-align: center;
 }
 
-.social-icons a {
-  color: #f1f1f1;
-  margin: 0 8px;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
+.social-btns .btn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+  background-color: #fff;
+  border-radius: 25%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
 }
 
-.social-icons a:hover {
-  color: #00bcd4;
+.social-btns .btn:before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 90%;
+  left: -110%;
+  transform: rotate(45deg);
+  transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
 }
 
-/* === WhatsApp Button === */
+.social-btns .btn i {
+  font-size: 26px;
+  line-height: 60px;
+  color: inherit;
+  transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+}
+
+/* === CORES POR REDE === */
+.btn.facebook { color: #3b5998; }
+.btn.twitter { color: #1da1f2; }
+.btn.linkedin { color: #0077b5; }
+.btn.youtube { color: #ff0000; }
+.btn.instagram { color: #e1306c; }
+.btn.github { color: #24292e; }
+
+/* === HOVER EFECT === */
+.btn.facebook:before { background-color: #3b5998; }
+.btn.twitter:before { background-color: #1da1f2; }
+.btn.linkedin:before { background-color: #0077b5; }
+.btn.youtube:before { background-color: #ff0000; }
+.btn.instagram:before { background-color: #e1306c; }
+.btn.github:before { background-color: #24292e; }
+
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-btns .btn:hover i {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+
+
+
+/* === AJUSTE DE ALTURA DAS IMAGENS === */
+.slideshow img {
+  width: 100%;
+  height: auto;
+  max-height: 280px; /* reduziu para laptops */
+  object-fit: contain;
+  display: none;
+  transition: opacity 1.2s ease-in-out;
+}
+
+/* === CENTRALIZAÇÃO DO CONTEÚDO PRINCIPAL === */
+main {
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === SOCIAL BUTTONS REPOSICIONADOS === */
+.social-btns {
+  margin-top: 1.2em;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.social-btns .btn {
+  width: 52px;
+  height: 52px;
+  margin: 6px;
+  border-radius: 25%;
+  background-color: #fff;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+}
+
+.social-btns .btn i {
+  font-size: 22px;
+  line-height: 52px;
+}
+
+/* === AJUSTE RESPONSIVO === */
+@media (max-width: 768px) {
+  .slideshow img {
+    max-height: 180px; /* menor em celulares */
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 1em;
+  }
+
+  .social-btns .btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .social-btns .btn i {
+    font-size: 20px;
+    line-height: 46px;
+  }
+
+  footer {
+    margin-top: 1em;
+    padding-bottom: 1em;
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+/* === BOTÃO FIXO "NOTIFY ME" (WHATSAPP STYLE) === */
 .notify-btn {
   position: fixed;
   bottom: 20px;
   right: 25px;
   background: #25d366;
   color: #fff !important;
-  border: none;
-  padding: 0.9em 1.5em;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 0.95rem;
+  border: 2px solid #25d366;
+  padding: 0.9em 1.8em;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
-  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  font-family: "Fira Sans", sans-serif;
 }
 
 .notify-btn:hover {
   background: #1ebe5d;
-  transform: scale(1.05);
+  border-color: #1ebe5d;
+  transform: translateY(-3px);
+  box-shadow: 0 0.6em 1.2em rgba(0, 0, 0, 0.35);
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  h1 { font-size: 1.8rem; margin-top: 0.8em; }
-  h2 { font-size: 1rem; margin-bottom: 1.5em; }
 
-  .slideshow {
-    width: 100%;
-    border-radius: 0;
-  }
-
-  .slideshow img {
-    max-height: 250px; /* reduz altura no celular */
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  button {
-    padding: 0.7em 1.2em;
-    font-size: 0.9rem;
-  }
-}
